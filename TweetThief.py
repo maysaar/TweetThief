@@ -24,7 +24,6 @@ def openFile(csv):
     return tweets
 
 
-
 csv = 'aoc.csv'
 rawTweets = openFile(csv)
 
