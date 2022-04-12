@@ -27,8 +27,11 @@ def openFile(csv):
 csv = 'aoc.csv'
 rawTweets = openFile(csv)
 
-
 cleanTweets = []
 for tweet in rawTweets:
     cleanTweets.append(cleanTweet(tweet))
-print(cleanTweets)
+# print(cleanTweets)
+
+fileName = csv[:-4] + ".txt"
+file = open(fileName, 'w')
+file.writelines(cleanTweets)
