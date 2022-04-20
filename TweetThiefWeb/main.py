@@ -16,7 +16,7 @@ def index():
 
 @app.route('/get/')
 def get_result():
-    url = "https://api.twitter.com/2/users/by/username/" + request.args.get("q")
+    url = "https://api.twitter.com/2/users/by/username/" + request.args.get("usernames")
     response = requests.request("GET", url, headers=headers, data=payload)
     # jsonResponse = response.json
     # data = JSON.parse(jsonResponse.data)

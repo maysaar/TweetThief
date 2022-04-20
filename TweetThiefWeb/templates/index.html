@@ -5,17 +5,22 @@
         <a href="https://lh3.googleusercontent.com/kfZhT597cYoGNPkmU3y8HWYTW6lGJMbU2KcQu1OzASUoMeOFlwrglfaCuUoiTYBGUfQcJ88z2mIv5SnqhYB4qQoAP_Kg2vVbJhwA6qNYUt2H8g-ygX-G9EElsw0fEUk4xtOAzTNbNQ=w2400?source=screenshot.guru" > 
             <center><img src="https://lh3.googleusercontent.com/kfZhT597cYoGNPkmU3y8HWYTW6lGJMbU2KcQu1OzASUoMeOFlwrglfaCuUoiTYBGUfQcJ88z2mIv5SnqhYB4qQoAP_Kg2vVbJhwA6qNYUt2H8g-ygX-G9EElsw0fEUk4xtOAzTNbNQ=w300-h185-p-k" ></center>
         </a>
-        <!-- <script type="module" src="{{ url_for('static', filename="js/search.js") }}"></script> -->
         <h1 style="text-align:center; color:rgb(29, 161, 242); font-family:Roboto; font-size:300%;" >Tweet Thief</h1>
     </head>
 
     <body style="background-color:rgb(211, 211, 211);">
-        <p style="text-align:center; color:rgb(101, 119, 134); font-family:Roboto; font-size: 150%">Enter a Twitter username to generate a fake tweet</p>
+        <p style="text-align:center; color:rgb(101, 119, 134); font-family:Roboto; font-size: 150%">Select a Twitter username to generate a fake tweet</p>
         <form id="form" action="/get/">
             <center>
-                <input type="search" id="searchbar" name="q" placeholder="Search username" >
+                <select name="usernames" id="usernames">
+                    <option value="aoc">@AOC</option>
+                    <option value="berniesanders">@BernieSanders</option>
+                    <option value="billgates">@BillGates</option>
+                    <option value="lindseygrahamsc">@LindseyGrahamSC</option>
+                    <option value="leodicaprio">@LeoDiCaprio</option>
+                    <option value="barackobama">@BarackObama</option>
+                </select>
                 <button type="submit" name="button" >Enter</button>
-                <p id="invalid" style="text-align:center; color:rgb(139, 59, 59); font-family:Roboto; font-size: 100%"></p>
             </center>
         </form>
     </body>
