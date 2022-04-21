@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request
 import requests
+# import gpt_2_simple as gpt2
+# from datetime import datetime
+# from google.colab import files
+
 
 app = Flask(__name__)
 
@@ -14,18 +18,13 @@ headers = {
 def index():
     return render_template('index.html')
 
-@app.route('/get/')
-def get_result():
-    url = "https://api.twitter.com/2/users/by/username/" + request.args.get("usernames")
-    response = requests.request("GET", url, headers=headers, data=payload)
-    # jsonResponse = response.json
-    # data = JSON.parse(jsonResponse.data)
-    # if "errors" in jsonResponse:
-    #     return str(response.text)
-    # else:
-    #     return str(response["data"])
-
-    return str(response.text)
+@app.route('/tweet', methods=["GET", "POST"])
+def tweet():
+    username = request.form.get("usernames")
+    data = {
+        "username" : username
+    }
+    return render_template('tweet.html', data=data)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -10,15 +10,15 @@
 
     <body style="background-color:rgb(211, 211, 211);">
         <p style="text-align:center; color:rgb(101, 119, 134); font-family:Roboto; font-size: 150%">Select a Twitter username to generate a fake tweet</p>
-        <form id="form" action="/get/">
+        <form method="POST" id="form" action="/tweet">
             <center>
                 <select name="usernames" id="usernames">
-                    <option value="aoc">@AOC</option>
-                    <option value="berniesanders">@BernieSanders</option>
-                    <option value="billgates">@BillGates</option>
-                    <option value="lindseygrahamsc">@LindseyGrahamSC</option>
-                    <option value="leodicaprio">@LeoDiCaprio</option>
-                    <option value="barackobama">@BarackObama</option>
+                    <option value="@AOC">@AOC</option>
+                    <option value="@BernieSanders">@BernieSanders</option>
+                    <option value="@BillGates">@BillGates</option>
+                    <option value="@LindseyGrahamSC">@LindseyGrahamSC</option>
+                    <option value="@LeoDiCaprio">@LeoDiCaprio</option>
+                    <option value="@BarackObama">@BarackObama</option>
                 </select>
                 <button type="submit" name="button" >Enter</button>
             </center>
