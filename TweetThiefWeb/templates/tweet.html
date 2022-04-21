@@ -12,7 +12,7 @@
         <style>
             .post__avatar img {
             border-radius: 50%;
-            height: 50px;
+            height: 60px;
             }
 
             .post {
@@ -21,6 +21,7 @@
             align-items: center;
             border-bottom: 1px solid var(--twitter-background);
             padding-bottom: 10px;
+            width: 450px;
             }
 
             .post__body img {
@@ -68,7 +69,7 @@
         </style>
         <p id="username" style="text-align:center; color:rgb(101, 119, 134); font-family:Roboto; font-size: 150%">{{data.username}}</p>    
         
-        <div class="post" style="position:relative; left:300px; top:2px;">
+        <div class="post" style="position:relative; left:25px; top:2px;">
             <div class="post__avatar">
               <img
                 id="profile_picture"
@@ -80,13 +81,13 @@
               <div class="post__header">
                 <div class="post__headerText">
                   <h3 id="name">
-                    <span class="post__headerSpecial"
-                      ><span class="material-icons post__badge"></span>{{data.username}}</span
-                    >
+                    <span class="post__headerSpecial">
+                      <span class="material-icons post__badge"></span>
+                    </span>
                   </h3>
                 </div>
                 <div class="post__headerDescription">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                  <p id="tweet">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </div>
             </div>
