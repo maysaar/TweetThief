@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 import requests
-# import gpt_2_simple as gpt2
-# from datetime import datetime
-# from google.colab import files
+import gpt_2_simple as gpt2
+from datetime import datetime
+from generateTweet import *
 
 
 app = Flask(__name__)
@@ -20,9 +20,36 @@ def index():
 
 @app.route('/tweet', methods=["GET", "POST"])
 def tweet():
+    returntext = ''
     username = request.form.get("usernames")
+    if username == "@LindseyGrahamSC":
+        returntext = generator('lg')
+    elif username == "@AOC":
+        returntext = generator('aoc')
+    elif username == "@BernieSanders":
+        returntext = generator('bernie')
+    elif username == "@BarackObama":
+        returntext = generator('obama')
+    elif username == "@BillGates":
+        returntext = generator('bill')
+    elif username == "@LeoDiCaprio":
+        returntext = generator('leo')
+    elif username == "@VanderbiltU":
+        returntext = generator('vandy')
+    elif username == "@melindagates":
+        returntext = generator('melinda')
+    elif username == "@MarshaBlackburn":
+        returntext = generator('marsha')
+    elif username == "@SpeakerPelosi":
+        returntext = generator('nancy')
+    elif username == "@BorisJohnson":
+        returntext = generator('boris')
+    elif username == "@GavinNewsom":
+        returntext = generator('gavin')
+
     data = {
-        "username" : username
+        "username" : username,
+        "tweet" : returntext
     }
     return render_template('tweet.html', data=data)
 
