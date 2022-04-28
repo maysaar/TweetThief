@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <a href="https://lh3.googleusercontent.com/kfZhT597cYoGNPkmU3y8HWYTW6lGJMbU2KcQu1OzASUoMeOFlwrglfaCuUoiTYBGUfQcJ88z2mIv5SnqhYB4qQoAP_Kg2vVbJhwA6qNYUt2H8g-ygX-G9EElsw0fEUk4xtOAzTNbNQ=w2400?source=screenshot.guru" > 
+            <center><img src="https://lh3.googleusercontent.com/kfZhT597cYoGNPkmU3y8HWYTW6lGJMbU2KcQu1OzASUoMeOFlwrglfaCuUoiTYBGUfQcJ88z2mIv5SnqhYB4qQoAP_Kg2vVbJhwA6qNYUt2H8g-ygX-G9EElsw0fEUk4xtOAzTNbNQ=w300-h185-p-k" ></center>
+        </a>
+        <h1 style="text-align:center; color:rgb(29, 161, 242); font-family:Roboto; font-size:300%;" >Tweet Thief</h1>
+    </head>
+
+    <body style="background-color:rgb(211, 211, 211);">
+        <style>
+            .post__avatar img {
+            border-radius: 50%;
+            height: 60px;
+            }
+
+            .post {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--twitter-background);
+            padding-bottom: 10px;
+            width: 450px;
+            }
+
+            .post__body img {
+            width: 450px;
+            object-fit: contain;
+            border-radius: 20px;
+            }
+
+            .post__badge {
+            font-size: 14px !important;
+            color: var(--twitter-color);
+            margin-right: 5px;
+            }
+
+            .post__headerSpecial {
+            font-weight: 600;
+            font-size: 12px;
+            color: gray;
+            font-family: Roboto;
+            }
+
+            .post__headerText h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+            font-family: Roboto;
+            font-weight: bold;
+            }
+
+            .post__headerDescription {
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-family: Roboto;
+            }
+
+            .post__body {
+            flex: 1;
+            padding: 10px;
+            font-family: Roboto;
+            }
+
+            .post__avatar {
+            padding: 20px;
+            }
+
+        </style>
+        <p id="username" style="text-align:center; color:rgb(101, 119, 134); font-family:Roboto; font-size: 150%">{{data.username}}</p>    
+        
+        <div class="post" style="position:relative; left:25px; top:2px;">
+            <div class="post__avatar">
+              <img
+                id="profile_picture"
+                alt=""
+              />
+            </div>
+    
+            <div class="post__body">
+              <div class="post__header">
+                <div class="post__headerText">
+                  <h3 id="name">
+                    <span class="post__headerSpecial">
+                      <span class="material-icons post__badge"></span>
+                    </span>
+                  </h3>
+                </div>
+                <div class="post__headerDescription">
+                  <p id="tweet">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <form action="/index">
+          <center><button>Generate another fake tweet</button></center>
+        </form>
+        
+    </body>
+    <script>
+      var username = document.getElementById("username").innerHTML;
+      if (username == "@AOC") {
+          document.getElementById("name").innerHTML = "Alexandria Ocasio-Cortez";
+          document.getElementById("profile_picture").src = "https://lh3.googleusercontent.com/X8hoUYKsJOp9152GAI9n0cB441m5Y40BlWKYOlNE0PZSH6Mn-WMjLB5ahDy4CEMwXE9kqOGtuCEH8HDXCJkvOfJHX7OVRyKzV2D30aDb5WInDl21XPGa9BWMkEZ8x9RY0P9SuE7PgoCfDkQwusiM4ebjbEfVKcgrdzxXaPNuET-63rjvXUYQ_JzCVmjRZV7k2NqjrzBSB8Kqa87LhNCzI0MyARyhmompmfl9pRnd-_V2xnizMAzA--nkZ_CJ16FHE1dlPmj7Y8cDPsj1SXLFE9ElV72Gh_JaSAWxNRzbz0pdj27kdQYY63JmwbgClCEGBx7qgJYb6yO_U4DHqdMle2UXI4mC1YRiyzFKP9Qdh6dWrM3AwYD5DELIzWL79P6B4riUjtCrieTN-I8tu0ZisiWOlrZ95vQWQx_dcADISZajsl5nYlMBJ3oGSBtCizXDRoRzSHEU1pA1oAIBMYrt1uU53D9Ki9RcRJoemo9ROuIV9B89suGF5vIHBR7_bXZz56Yw8h9nF_r7E7c6qClh5pzvyMMfX4eYOHQM0RshBvNmIAxRqUaHFmz-PBmPJRSu9esjZmE00NSfFjxwQXPcXFZm2RSGbjSlTeJpcFUBLH-nddzrXLYg3oHxuUNHN1uPzowHKSe-L2nwqpT3O5GaSt6sBDX3nbWr6vGbeq9Ni2Zntpedxu4QK8b38zjmWbIaK1KDlDyGWjbeSqOv2zXTb3FULtkBcHHbF8sTg_uHgIDxQDLRTrPgHupUDiPVD-f3LzbdupcejGIHiSq3010GiOb3tDbmE3waKyE=s400-no?authuser=0";
+      } else if (username == "@BarackObama") {
+          document.getElementById("name").innerHTML = "Barack Obama";
+          document.getElementById("profile_picture").src = "https://lh3.googleusercontent.com/3RnmLM6-BCIgLS_cm9Y_N8d38JKlsuq-r0uiEf8n3wn0G_eGEJbJVfbRzTuMVWU9xgHEZ5mw8Zz2OGSagwNlTq1zhCrwsK9zkNr60jF4UWsGcBquW98YKdjleBMhcRJeHr-Zr9Q5TNPHiDPQZlxU3oRhsMkf_RNeD4jXHDF2MNXFjvQEvlErtR7Dnf-NgadjwseCe5Pqe9WA72XsPCUklAIVYj-ECPTodos7NKjhZj9JsHyY_J5VMEcgXl55nIK1rqg88yytvLWSiexBPd0vVllMfHX4S-UfuO2PuOqXRWTb5GNWrttONkljbccSPNk7gFRI5se-e5cR-eJ3Cxnz_uQ_S2RIx7JV1MS1PF0d4-EkjuxcAu515dB8rzuUFE5eZ-yZdKzNuz--Xra_ITfTcIGwJbXWPzuLdRnH9SkXGJDYZh6-8AdZ0FmipwnFNzXYAwiF1RpE2tYbd9K06PBkIgu7pY0NtgFdNZhzTI_Rd8yECpfUSpqRAX6PFimmgPzU4Xk_TTuXMVmtLfHdPb0bdLEDPqhc_1E9BJ6ztah8tCNEZOKx2c0b3XvqcpbimCW2fMq_jnw03T1sRoirD6lj4TmjKitCONxmwL1N63qZBuY6P_y9R6ku7cg9RJVYzJQdq3y5cERYVmkg_d7nQ3m41VhdWgzUyRtnV_c1T6OiHTFsfW7ZU5E6zXAzz9i00GhAKxZJ5CECpN4dkt3TjcMLztBDje-sQeyu_D3vCErGXJ_otUFVoHk3iglmVXltgX39XaultfJGUSzeY-ddosNxyUiLHqwvTS4fPv4=s400-no?authuser=0";
+      } else if (username == "@BernieSanders") {
+          document.getElementById("name").innerHTML = "Bernie Sanders";
+          document.getElementById("profile_picture").src = "https://lh3.googleusercontent.com/ypHD5n1-S2zuxhx6Sr2RkyR66L20Rv8Ji3d8fBsYDgixRsQWXD7u3L8Zb2Jw25rBLHubGoZy9UG48jeLMDd5olB73uzrZ1xE4DA6pjIISAkfV5sfq3mChm3IxLYQUP5h2_mRi_Z1G-pWbXtmTTGyX1MxpQB8vY95gY1bDt6h5B2p3dcishtxPiOBDQjYJN4G7TB_U1mP6iirAVAXvTS0QrbUtAs6F3FdTW7N4S5gAFEQ3x1SSAq4j4HnzXfhFxY4wT7NsWKsdgKYGfjL6XF1npRn9WCn19DbtMrvgdUf1BkPNXwnsq7uKa49SkfL0qVFsEce9A3H505QHTZwzPEP65IXQbg0CMvlW9P1hgTvecYxgewBXngrpezjYOVz7tC7auEV_bbRiPyzY_BhEHsIM7J2LS_d0bQ46Fnsd-5Xoy8huuFBJUdVU8wyI5WIWgbcFowB6PGLcnBsxS9x5Cj79pKA9dOC_JvoJrBKVHVc3Jqobg6yYE5Fiod5tJ0yXgMyvS-E10Kr5QaQQL0Aa7_4t7ozaRbrI7dPyVbBWQ3IeC_RVv_PboJf8GGkXhRBGy46IfWWilvtdImc92BpNsCVxSqjVISDAEhB4r0dI4NTQMH0MgjT-6E7n4q43C4vjn8QzWzNQVpD4unmKc1EFa54GErXRSYm34mJovj5Yv7zox3IvddaqrJ0ZuN4VS-o-APddJ64BK13-ERzXt8giyC_9LdS1ZzfOOblyVg5waX9S5eVwzz7YsujEzS7MyysvaIjOD0d20IAO6Ajs51WClROiSrA5ybO0ijDFdQ=s400-no?authuser=0";
+      } else if (username == "@BillGates") {
+          document.getElementById("name").innerHTML = "Bill Gates";
+          document.getElementById("profile_picture").src = "https://lh3.googleusercontent.com/rXKywS6YpzVD9EwQcTYNmdfFg43NzcR6xXgy0pPQrBV3MaMVkkx-GnlZpHv9E4candMIX6k0G49f6klZevlGo8ZFVEeafUBIfo1AFiURReu_Vlwe0LZs0D94pqdYCO4Nflx5iRG8tIUTTGJs5u9kXdlDPTvLkfYbMfl12xcHnjirnj3S4C_ccyUyl-LBFiPWa8Yli825FekyJRTCCpMutSTzQ6vP4uGhkRCragM4YfMa0hx4skGsa5rbI-7ADcHC2oE86xOJVowLJUgInrOf3wCm26QrGdIsPP56vYk7YrV3lkT6IP1yhv5YLlPDJWPqhn_BBx6W6qWoo5UIqLZoNwxqwQ3Va2_S2Xd5K_4dZT0f3-G_RU458kioWWVeQqWxo58g-AyLjBTslU4sdEsy0piHESzsOMBr7af4wAcZaQUnM8_Obg488f5HLoaslTqSlF28RPnxNYhOYQebEb7bRwuV14LiWeZFm7Ije9mRdfVV0yyGWiDizKgd8MqQ9SmO18HO512dTBxcDHp7isV7ysSMERt43Yc6xsjWFceTfChgmOrqqUxe1jMOjKeyJtYiCH0mQUxkGZ18FJ6htAP2aro_eT0HlAlgqS_Q8LRKDm2mmvP3IM4eziYqPHTSmHYzIvA-78MhbbVwU1gdIp4UAg8z1W-Iz1sj4x9mOWp-JF04ecyeGE4kHna1jzOU9Geu4_bbqFgFaqhnHPSy4GYXeZpgnlvKOrjrKK81qX6qzXQg7XR2RuMiG86CUN4udvV-clLA1NBa5W-OfYeVq4cYiDiTbrwDCjh_8rI=s400-no?authuser=0";
+      } else if (username == "@LindseyGrahamSC") {
+          document.getElementById("name").innerHTML = "Lindsey Graham";
+          document.getElementById("profile_picture").src = "https://lh3.googleusercontent.com/yaAJB8RUIqdk6Pacnf9VJOUOyIE14zdvxPFx0iVPuiqdUhr-r0Tqk3HllASBKQPMIKo8sTHJ85dTcpFBqtBsOWrDX-9_4CSpSKVp_9QXluSM466xU19npjzJ5kIo1e8ZXNL8m_J3cgk0MyESQGsQoBZm1uvsGOyTI1LQMTnlnKvHWtxcS03BEo5tnlBhSCm3-L381KPxo8mYxGEgIGbtWr6zvYgSBzEF5pJbkrbP_tvWjDrSBU-u1zbc1HNbJ4CzM3b_RO-qe1-3MFm20cmz13PmlnLz27zjZZiBxmqiPxFCO97Gx6ORigyA6vz9ssj1PvdU6lxWI69J2ytHQdxKiLZQyotFpVSW_yfcWn7YLOmPgGl2emjHypGDWca9xKr6Kl-v3OA5L7qI4FajArJ5yV9in_oPOeWgaZiyatWdaksTnR52t1YUNoMAdSgZJ4gIzgSvr4Tka-M6QAlKhl6aTunfVF0FuD03N-7eSlNqNbCT-ZaSe7QRd17tIpiZg4Lm5_weoUV8A7C7uW9Fs9cvlxAVZK5QlXxHAVn8iGgmVPiqpb8l9Y5VBoP9kV_rj_ADSQYhA6kFAoKCcVB4Pn3ZWZlYs9lcag38n6cJXlfIbg2O7ex2EHXPLQLOXGWdF_YW6mcAKOy3tVWd7t8p60fiusdmYVpWb-D_NmQxOHmBMandamGzEKnSGL3AN0mM8O4_mB3mIm3qMrmpwHWUDeHxoDbC4Y8BfOG-TJ9m3A8NrTtWNabpHlWgBTzUEUITlkZ23wFGxaSUw24Lx4bU8yf49947TMReg3SkgAU=s400-no?authuser=0";
+      } else if (username == "@LeoDiCaprio") {
+          document.getElementById("name").innerHTML = "Leonardo DiCaprio";
+          document.getElementById("profile_picture").src = "https://lh3.googleusercontent.com/24WEk7fqXG7KH_P3Tda7dsChHNdAibs2OeiexLFhXYejUTIGyg1czmngLV5aWRZAWwLBkAJg7ohVEhNPZ1YnBsuVTNDpjPcMfFsz3XT6GghtZLxEBObqJhpSGqfAOOPtGo2jOPBvrMIkjuTFoINdXfn7q8dHZXEzK7RegMJBFBtUL9l0bpVlZiQnjFCXPLsFhxCmXmoM7nVdGPkmTLvM9V3LrSySCmPXWe0IQCWwYqXUbgCkpeRiEp3L1NFZChLpfXVM09XDNyE3kMhKJW2EOvzx3z5bYFkKdimAyt8UpIxcTA7c5522ISPIWpteoREyqT8vxSX_eJabJZJJjYKJjT3hC5cFkNDXc2RvvwLf1TNksipLGR2JD44t1wO2Q3Qal1zsEWPdpPY8IMPdO61sx7c8csJ4ZAcjMm-SJoFapnF6xmXz1Fb17OrJ3X9USMC8c6SAcOcig9PhLhOesHN-pVJdPKDetAnjpRyuOz6JJ-6v2NPVtm2ZPjj8k2c73vAvFKJwyp74Yb0MvS0Je4z7BXb1hH2Tg8eXr1cFgM4SI31aulTvOyErKf26wI6DH1sSYYBuq2hPcN0HM4dmlj3HzGa80AjNG0VsixjLXgYwAwKkhySaeS8BkSvYhfCjy6LQ5lh-Bbeh_ckj3uTYnj0Vni1SSGCfAH07QYsSl7Zjv3rcpyjO8bGSQjpZx8XzGc_n3Eyz-uipbxR7PRadaRv7F9bLMQWpMoKRYo3f_kwir-zST-1bqQ5MvWW0vtT0DAtFq5OYc9WPpemh6XPERSpo2eWqkxabqhvZksg=s400-no?authuser=0";
+      }
+  </script>
+</html>  
